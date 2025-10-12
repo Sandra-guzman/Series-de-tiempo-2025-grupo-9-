@@ -1,37 +1,38 @@
-# =====================================
-# Configuración del Jupyter Book
-# =====================================
+# ====================================================
+# CONFIGURACIÓN PRINCIPAL DEL JUPYTER BOOK
+# ====================================================
 
-# Nombre del libro
 title: "Series de Tiempo 2025 - Grupo 9"
-
-# Autor o institución
 author: "Sandra Guzmán"
 
-# Directorio raíz del contenido
+# Ruta raíz del libro
 root: .
 
-# Carpeta donde se construirá el HTML
+# Carpeta de salida
 output_dir: _build/html
 
-# URL del repositorio (necesario para desplegar)
+# ====================================================
+# REPOSITORIO (IMPORTANTE para desplegar)
+# ====================================================
 repository:
   url: https://github.com/Sandra-guzman/Series-de-tiempo-2025-grupo-9
-  path_to_book: book
   branch: main
+  path_to_book: book
 
-# Configuración del tema
+# ====================================================
+# OPCIONES DE HTML
+# ====================================================
 html:
   favicon: ""
   logo: ""
   use_repository_button: true
   use_issues_button: true
   use_edit_page_button: false
-  home_page_in_navbar: true
 
-# Información general
+# ====================================================
+# CONTROL DE EJECUCIÓN DE NOTEBOOKS
+# ====================================================
 execute:
   execute_notebooks: "off"
 
-# Parámetros de advertencia y control
 only_build_toc_files: true
