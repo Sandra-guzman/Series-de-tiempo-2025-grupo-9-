@@ -1,8 +1,9 @@
-# ========================================
-# TABLA DE CONTENIDOS DEL LIBRO
-# ========================================
+# ===========================================
+# TABLA DE CONTENIDOS
+# ===========================================
+
 format: jb-book
-root: intro
+root: introducción
 
 chapters:
-  - file: series_de_tiempo
+  - file: serie_de_tiempo
