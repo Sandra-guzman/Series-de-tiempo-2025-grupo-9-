@@ -1,0 +1,14 @@
+# ========================================
+# CONFIGURACIÓN BÁSICA DEL LIBRO
+# ========================================
+
+title: "Series de Tiempo - Grupo 9 (2025)"
+author: "Sandra Guzmán"
+logo: ""
+execute:
+  execute_notebooks: "off"
+html:
+  favicon: ""
+  use_repository_button: true
+  use_issues_button: false
+  use_edit_page_button: false
