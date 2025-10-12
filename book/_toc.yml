@@ -1,9 +1,5 @@
-# ====================================================
-# Tabla de contenido del libro
-# ====================================================
-
 format: jb-book
 root: intro
-
 chapters:
-  - file: series_de_tiempo
+  - file: Capitulo0
+    title: "Capítulo 1: Introducción"
