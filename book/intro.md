@@ -1,7 +1,11 @@
 
-PONTIFICIA UNIVERSIDAD JAVERIANA 
+PONTIFICIA UNIVERSIDAD JAVERIANA
+
 MAESTRIA EN CIENCIA DE DATOS
-SERIES DE TIEMPOS GRUPO: 9
+
+ASIGNATURA: SERIES DE TIEMPO
+
+GRUPO: 9
 
 Importancia de la producción agrícola en el crecimiento económico y la seguridad alimentaria
 
