@@ -6,8 +6,8 @@ SERIES DE TIEMPOS GRUPO: 9
 **DESCRIPCIÓN DEL CONJUNTO DE DATOS**
 
 Nombre: FAOSTAT_Produccion_Agricola_Completa.csv 
-Rangod e tiempode la información: (1990–2024)
-Registros: 1260 y 12 variables Países: Argentina, Brasil, Chile, Colombia, Perú, México
+Rango de tiempo de la información: (1990–2024)
+Registros: 1260 
 
 Variables incluidas:
 
