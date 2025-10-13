@@ -3,34 +3,8 @@ PONTIFICIA UNIVERSIDAD JAVERIANA
 MAESTRIA EN CIENCIA DE DATOS
 SERIES DE TIEMPOS GRUPO: 9
 
-**DESCRIPCIÓN DEL CONJUNTO DE DATOS**
+Importancia de la producción agrícola en el crecimiento económico y la seguridad alimentaria
 
-Nombre: FAOSTAT_Produccion_Agricola
-Rango de tiempo de la información: (1990–2024)
-Registros: 1260 
+El título propuesto refleja la esencia del análisis planteado en este proyecto, al vincular la producción agrícola con dos dimensiones estratégicas del desarrollo sostenible: el crecimiento económico y la seguridad alimentaria. En América Latina, estos factores están profundamente interrelacionados, ya que el desempeño del sector agrícola no solo determina el aporte al PIB y la generación de empleo, sino también la capacidad de los países para garantizar el abastecimiento interno y reducir su vulnerabilidad ante las crisis internacionales de precios y suministro. Desde una perspectiva de análisis de series de tiempo, este enfoque permite modelar tendencias de largo plazo y evaluar la respuesta estructural del sector frente a cambios climáticos, tecnológicos y comerciales.
 
-Variables incluidas:
-
-
-*   País
-*   Producto
-*   Año
-*   Unidad de medida(toneladas)
-*   Producción
-*   Consumo
-*   Exporataciones
-*   Precio_Promedio_USD
-*   Comercio 
-*   Precio_Promedio_USD
-*   Área_cosechada
-*   Rendimiento
-
-*Taxonomía de las variables:*
-
-Pais: cualitativa, nominal, texto. 
-Producto: Cualitativa, nominal,texto. Año: Cuantitativa, discreta, entero. Unidad: Cualitativa, nominal, texto. Producción:Cuantitativa, continua, real. Consumo: Cuantitativa, continua, real.
-Exportaciones:Cuantitativa, continua, real.
-Precio_promedio_USD: Cuantitativa, continua, real.
-
-
-
+Asimismo, este título destaca la relevancia de aplicar herramientas estadísticas y modelos predictivos para transformar datos históricos en conocimiento útil para la toma de decisiones. El estudio de variables como producción, consumo, rendimiento, exportaciones y precios promedio permite no solo identificar patrones y ciclos, sino también estimar escenarios futuros que orienten la formulación de políticas públicas. De esta manera, el Bookdown se proyecta como un aporte académico y técnico que conecta la analítica de datos con los desafíos reales de sostenibilidad, productividad y seguridad alimentaria en los principales países agrícolas de América Latina.
