@@ -5,7 +5,7 @@ SERIES DE TIEMPOS GRUPO: 9
 
 **DESCRIPCIÓN DEL CONJUNTO DE DATOS**
 
-Nombre: FAOSTAT_Produccion_Agricola_Completa.csv 
+Nombre: FAOSTAT_Produccion_Agricola
 Rango de tiempo de la información: (1990–2024)
 Registros: 1260 
 
