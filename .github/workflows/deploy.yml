@@ -18,13 +18,19 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Install Jupyter Book
+      - name: Install dependencies
         run: |
           pip install -U jupyter-book ghp-import
 
-      - name: Build the Jupyter Book
+      - name: Debug - List files before build
         run: |
-          jupyter-book build book/
+          echo "📁 Listando archivos del repositorio:"
+          ls -R
+
+      - name: Build the book
+        working-directory: ./book
+        run: |
+          jupyter-book build .
 
       - name: Deploy to GitHub Pages
         run: |
