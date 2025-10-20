@@ -22,7 +22,7 @@ jobs:
         run: |
           pip install -U jupyter-book ghp-import
 
-      - name: Build the book
+      - name: Build the Jupyter Book
         run: |
           jupyter-book build book/
 
