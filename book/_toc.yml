@@ -3,3 +3,5 @@ root: intro
 chapters:
   - file: Capitulo0
     title: "Capítulo 1: Introducción"
+  - file: capitulo-1
+    title: "Capítulo 2: Análisis sin gráficas"
