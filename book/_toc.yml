@@ -2,6 +2,6 @@ format: jb-book
 root: intro
 chapters:
   - file: Capitulo0
-    title: "Capítulo 1: Introducción"
+    title: "Capítulo 0: Propuesta del conjunto de datos"
   - file: capitulo-1
-    title: "Capítulo 2: Análisis sin gráficas"
+    title: "Capítulo 1: Analísis gráfico del conjunto de datos"
