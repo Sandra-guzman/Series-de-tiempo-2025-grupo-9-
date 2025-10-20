@@ -1,7 +1,7 @@
 format: jb-book
 root: intro
 chapters:
-  - file: Capitulo0
+  - file: Capitulo0.ipynb
     title: "Capítulo 0: Propuesta del conjunto de datos"
-  - file: capitulo-1
+  - file: Capitulo1.ipynb
     title: "Capítulo 1: Análisis gráfico del conjunto de datos"
