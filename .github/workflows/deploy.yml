@@ -9,6 +9,7 @@ on:
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -22,9 +23,16 @@ jobs:
         run: |
           pip install -U jupyter-book ghp-import
 
-      - name: Build the Jupyter Book
+      - name: List files before build
         run: |
-          jupyter-book build ./book/
+          echo "📁 Estructura del proyecto antes del build:"
+          ls -R
+
+      - name: Build the Jupyter Book (debug mode)
+        working-directory: ./book
+        run: |
+          echo "🚧 Iniciando construcción del libro..."
+          jupyter-book build . --verbose
 
       - name: Deploy to GitHub Pages
         run: |
