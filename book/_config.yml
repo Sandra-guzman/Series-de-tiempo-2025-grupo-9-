@@ -3,13 +3,18 @@
 # ====================================================
 
 title: "Series de Tiempo 2025 - Grupo 9"
-author: "Sandra Guzmán"
+author: "Sandra Guzmán y Grupo 9"
 
-# Ruta raíz del libro
-root: .
+# ====================================================
+# CONTROL DE EJECUCIÓN DE NOTEBOOKS
+# ====================================================
+execute:
+  execute_notebooks: "off"
 
-# Carpeta de salida
-output_dir: _build/html
+# ====================================================
+# ESTRUCTURA Y RUTAS
+# ====================================================
+only_build_toc_files: true
 
 # ====================================================
 # REPOSITORIO (IMPORTANTE para desplegar)
@@ -29,10 +34,3 @@ html:
   use_issues_button: true
   use_edit_page_button: false
 
-# ====================================================
-# CONTROL DE EJECUCIÓN DE NOTEBOOKS
-# ====================================================
-execute:
-  execute_notebooks: "off"
-
-only_build_toc_files: true
