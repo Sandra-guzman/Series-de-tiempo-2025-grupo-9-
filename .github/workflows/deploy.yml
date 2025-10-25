@@ -37,3 +37,8 @@ jobs:
       - name: Deploy to GitHub Pages
         run: |
           ghp-import -n -p -f ./book/_build/html
+      - name: Deploy to GitHub Pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          ghp-import -n -p -f ./book/_build/html
