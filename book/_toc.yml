@@ -5,3 +5,5 @@ chapters:
     title: "Capítulo 0: Propuesta del conjunto de datos"
   - file: Capitulo1
     title: "Capítulo 1: Análisis gráfico del conjunto de datos"
+  - file: Capitulo2
+    title: "Capítulo 2: Modelos y resultados"
