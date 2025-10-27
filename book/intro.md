@@ -1,13 +1,4 @@
-
-PONTIFICIA UNIVERSIDAD JAVERIANA
-
-MAESTRIA EN CIENCIA DE DATOS
-
-ASIGNATURA: SERIES DE TIEMPO
-
-GRUPO: 9
-
-Importancia de la producción agrícola en el crecimiento económico y la seguridad alimentaria
+# Importancia de la producción agrícola en el crecimiento económico y la seguridad alimentaria
 
 El título propuesto refleja la esencia del análisis planteado en este proyecto, al vincular la producción agrícola con dos dimensiones estratégicas del desarrollo sostenible: el crecimiento económico y la seguridad alimentaria. En América Latina, estos factores están profundamente interrelacionados, ya que el desempeño del sector agrícola no solo determina el aporte al PIB y la generación de empleo, sino también la capacidad de los países para garantizar el abastecimiento interno y reducir su vulnerabilidad ante las crisis internacionales de precios y suministro. Desde una perspectiva de análisis de series de tiempo, este enfoque permite modelar tendencias de largo plazo y evaluar la respuesta estructural del sector frente a cambios climáticos, tecnológicos y comerciales.
 
