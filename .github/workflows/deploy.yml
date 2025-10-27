@@ -26,7 +26,7 @@ jobs:
         run: |
           pip install -U jupyter-book ghp-import
 
-      # 4️⃣ Muestra la estructura antes del build (útil para depuración)
+      # 4️⃣ Muestra la estructura antes del build
       - name: List files before build
         run: |
           echo "📁 Estructura del proyecto antes del build:"
@@ -45,4 +45,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           echo "🚀 Desplegando en GitHub Pages..."
-          ghp-import -n -p -f ./book/_build/html
+          ghp-import -n -p -f book/_build/html
