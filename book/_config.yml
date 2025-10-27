@@ -10,7 +10,7 @@ author: "Sandra Guzmán y Grupo 9"
 # CONTROL DE EJECUCIÓN DE NOTEBOOKS
 # ====================================================
 execute:
-  execute_notebooks: "off"
+  execute_notebooks: "off"   # no ejecuta los notebooks durante la construcción
 
 # ====================================================
 # ESTRUCTURA Y RUTAS
@@ -38,12 +38,23 @@ html:
     <div style="text-align:center;">
       © 2025 Sandra Guzmán y Grupo 9 — Pontificia Universidad Javeriana
     </div>
+  extra_css:
+    - _static/hide_code.css   
 
 # ====================================================
-# METADATOS OPCIONALES
+# CONFIGURACIÓN DE SPHINX Y MYST-NB
 # ====================================================
 sphinx:
   config:
-    html_show_copyright: false
+    html_show_sourcelink: false
     html_theme_options:
       navigation_with_keys: true
+
+    # Configuración moderna de myst-nb
+    myst_nb:
+      renderer: "sphinx"          # renderer correcto (evita el error de entry point)
+      remove_code_source: true    # oculta las celdas de código
+      remove_code_outputs: false  # muestra las salidas (puedes poner true si también quieres ocultarlas)
+      code_prompt_show: false     # oculta el botón “Show code”
+      code_prompt_hide: false
+      execution_mode: "off"       # evita ejecución por seguridad
