@@ -1,4 +1,3 @@
-# book/_toc.yml
 format: jb-book
 root: intro
 
@@ -9,3 +8,5 @@ chapters:
     title: "Capítulo 1: Análisis gráfico del conjunto de datos"
   - file: Capitulo2
     title: "Capítulo 2: Modelos y resultados"
+  - file: Capitulo3
+    title: "Capítulo 3: Comparativo de consumo y desempeño de modelos"
