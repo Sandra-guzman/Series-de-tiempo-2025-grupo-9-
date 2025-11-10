@@ -75,4 +75,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           echo "🚀 Desplegando en GitHub Pages..."
-          ghp-import -n -p -f mybook/_build/html
+          ghp-import -n -p -f ./book/_build/html
