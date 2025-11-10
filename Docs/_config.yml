@@ -2,7 +2,7 @@
 # CONFIGURACIÓN PRINCIPAL DEL JUPYTER BOOK
 # ====================================================
 
-#root: ./
+#root: ./ 
 title: "Series de Tiempo 2025 - Grupo 9"
 author: "Sandra Guzmán y Grupo 9"
 
