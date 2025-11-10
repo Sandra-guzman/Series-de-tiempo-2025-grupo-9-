@@ -44,13 +44,15 @@ jobs:
           python -c "import jupyter_book; print('✅ jupyter_book importado correctamente')"
 
 
-      - name: Build the Jupyter Book (full debug)
+      - name: Build the Jupyter Book (safe debug)
         run: |
-          echo "🚧 Iniciando construcción del libro (modo DEBUG)..."
+          echo "🚧 Iniciando construcción del libro (modo seguro)..."
           echo "📁 Contenido inicial de ./book:"
-          ls -R ./book || echo "⚠️ No se encontró la carpeta book"
-          echo "🏗 Ejecutando build con máximo detalle..."
-          python -m jupyter_book build ./book --log-level DEBUG || (echo "❌ Falló el build del libro" && exit 1)
+          ls -R ./book
+          echo "🏗 Ejecutando build detallado..."
+          # Forzamos reconstrucción completa con logs detallados de Sphinx
+          export JUPYTER_BOOK_VERBOSE=1
+          python -m jupyter_book build ./book --keep-going --all
           echo "📦 Archivos generados en _build:"
           ls -R ./book/_build || echo "⚠️ No se generó carpeta _build"
 
