@@ -44,10 +44,16 @@ jobs:
           python -c "import jupyter_book; print('✅ jupyter_book importado correctamente')"
 
 
-      - name: Build the Jupyter Book
+      - name: Build the Jupyter Book (full debug)
         run: |
-          echo "Iniciando construcción del libro con comando directo..."
-          python -m jupyter_book build ./mybook -v
+          echo "🚧 Iniciando construcción del libro (modo DEBUG)..."
+          echo "📁 Contenido inicial de ./book:"
+          ls -R ./book || echo "⚠️ No se encontró la carpeta book"
+          echo "🏗 Ejecutando build con máximo detalle..."
+          python -m jupyter_book build ./book --log-level DEBUG || (echo "❌ Falló el build del libro" && exit 1)
+          echo "📦 Archivos generados en _build:"
+          ls -R ./book/_build || echo "⚠️ No se generó carpeta _build"
+
 
       - name: Deploy to GitHub Pages
         env:
