@@ -9,6 +9,7 @@ on:
 permissions:
   contents: write
 
+
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
@@ -29,7 +30,8 @@ jobs:
       - name: List files before build
         run: |
           echo "📁 Estructura del proyecto antes del build:"
-          ls -R
+          ls -la
+          ls -la book || true
 
       - name: Build the Jupyter Book (debug mode)
         working-directory: ./book
@@ -37,9 +39,21 @@ jobs:
           echo "🚧 Iniciando construcción del libro..."
           jupyter-book build . -v
 
-      - name: Deploy to GitHub Pages
+      - name: List build output (debug)
+        run: |
+          echo "📁 Comprobando salida del build:"
+          ls -la book/_build || echo "⚠️ book/_build no existe"
+          ls -la book/_build/html || echo "⚠️ book/_build/html no existe"
+
+      - name: Deploy to GitHub Pages (only if build succeeded)
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           echo "🚀 Desplegando en GitHub Pages..."
-          ghp-import -n -p -f book/_build/html
+          if [ -d "book/_build/html" ]; then
+            ghp-import -n -p -f book/_build/html
+          else
+            echo "❌ No se encontró book/_build/html. Abortando despliegue."
+            echo "Mira los pasos anteriores para ver por qué el build falló."
+            exit 1
+          fi
