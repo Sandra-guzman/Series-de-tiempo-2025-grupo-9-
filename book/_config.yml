@@ -2,7 +2,6 @@
 # CONFIGURACIÓN PRINCIPAL DEL JUPYTER BOOK
 # ====================================================
 
-#root: ./ 
 title: "Series de Tiempo 2025 - Grupo 9"
 author: "Sandra Guzmán y Grupo 9"
 
@@ -10,7 +9,7 @@ author: "Sandra Guzmán y Grupo 9"
 # CONTROL DE EJECUCIÓN DE NOTEBOOKS
 # ====================================================
 execute:
-  execute_notebooks: "off"   # no ejecuta los notebooks durante la construcción
+  execute_notebooks: "off"
 
 # ====================================================
 # ESTRUCTURA Y RUTAS
@@ -18,7 +17,7 @@ execute:
 only_build_toc_files: true
 
 # ====================================================
-# REPOSITORIO (IMPORTANTE para desplegar correctamente en GitHub Pages)
+# REPOSITORIO (para desplegar correctamente en GitHub Pages)
 # ====================================================
 repository:
   url: https://github.com/Sandra-guzman/Series-de-tiempo-2025-grupo-9
@@ -39,7 +38,7 @@ html:
       © 2025 Sandra Guzmán y Grupo 9 — Pontificia Universidad Javeriana
     </div>
   extra_css:
-    - _static/hide_code.css   
+    - _static/hide_code.css
 
 # ====================================================
 # CONFIGURACIÓN DE SPHINX Y MYST-NB
@@ -49,18 +48,20 @@ sphinx:
     html_show_sourcelink: false
     html_theme_options:
       navigation_with_keys: true
-
-    # Configuración moderna de myst-nb
     myst_nb:
-      renderer: "sphinx"          # renderer correcto (evita el error de entry point)
-      remove_code_source: true    # oculta las celdas de código
-      remove_code_outputs: false  # muestra las salidas (puedes poner true si también quieres ocultarlas)
-      code_prompt_show: false     # oculta el botón “Show code”
+      renderer: "sphinx"
+      remove_code_source: true
+      remove_code_outputs: false
+      code_prompt_show: false
       code_prompt_hide: false
-      execution_mode: "off"       # evita ejecución por seguridad
-    # Ignorar archivos no deseados durante el build
-    exclude_patterns:
-      - Ocultar celdas.py
-      - README.md
-      - "*.log"
-      - "_build"
+      execution_mode: "off"
+
+# ====================================================
+# EXCLUSIONES (para evitar el error EISDIR)
+# ====================================================
+exclude_patterns:
+  - Ocultar celdas.py
+  - README.md
+  - "*.log"
+  - "_build"
+  - "_static"
