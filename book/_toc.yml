@@ -10,5 +10,5 @@ chapters:
     title: "Capítulo 2: Modelos y resultados"
   - file: Capitulo3
     title: "Capítulo 3: Comparativo de consumo y desempeño de modelos"
-  - file: Capitulo4_resultados
+  - file: Capitulo4
     title: "Capítulo 4: Análisis ARIMA aplicado a la producción de café en Argentina"
