@@ -9,7 +9,6 @@ on:
 permissions:
   contents: write
 
-
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
@@ -27,33 +26,32 @@ jobs:
         run: |
           pip install -U jupyter-book ghp-import
 
-      - name: List files before build
+      - name: Debug structure
         run: |
-          echo "📁 Estructura del proyecto antes del build:"
-          ls -la
-          ls -la book || true
+          echo "📁 Estructura completa del proyecto:"
+          find . -maxdepth 3 -type f
 
-      - name: Build the Jupyter Book (debug mode)
+      - name: Build the Jupyter Book
         working-directory: ./book
         run: |
           echo "🚧 Iniciando construcción del libro..."
-          jupyter-book build . -v
+          jupyter-book build . -v || (echo "❌ Falló el build del libro" && exit 1)
 
-      - name: List build output (debug)
+      - name: Check build output
         run: |
-          echo "📁 Comprobando salida del build:"
-          ls -la book/_build || echo "⚠️ book/_build no existe"
-          ls -la book/_build/html || echo "⚠️ book/_build/html no existe"
+          echo "📁 Comprobando salida del build..."
+          if [ -d "book/_build/html" ]; then
+            echo "✅ Carpeta de salida encontrada: book/_build/html"
+            ls -la book/_build/html
+          else
+            echo "❌ No se encontró la carpeta book/_build/html"
+            echo "⚠️ Revisa los logs del paso anterior (Build the Jupyter Book)"
+            exit 1
+          fi
 
-      - name: Deploy to GitHub Pages (only if build succeeded)
+      - name: Deploy to GitHub Pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           echo "🚀 Desplegando en GitHub Pages..."
-          if [ -d "book/_build/html" ]; then
-            ghp-import -n -p -f book/_build/html
-          else
-            echo "❌ No se encontró book/_build/html. Abortando despliegue."
-            echo "Mira los pasos anteriores para ver por qué el build falló."
-            exit 1
-          fi
+          ghp-import -n -p -f book/_build/html
