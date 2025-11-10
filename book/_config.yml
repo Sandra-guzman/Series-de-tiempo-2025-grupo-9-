@@ -59,9 +59,3 @@ sphinx:
 # ====================================================
 # EXCLUSIONES (para evitar el error EISDIR)
 # ====================================================
-exclude_patterns:
-  - Ocultar celdas.py
-  - README.md
-  - "*.log"
-  - "_build"
-  - "_static"
