@@ -38,7 +38,7 @@ jobs:
           echo "📁 Contenido del directorio actual:"
           ls -R .
           echo "Ejecutando build..."
-          jupyter-book build book/ || (echo "❌ Falló el build del libro" && exit 1)
+          jupyter-book build . || (echo "❌ Falló el build del libro" && exit 1)
           echo "Archivos generados:"
           ls -R _build || echo "⚠️ No se generó carpeta _build"
 
