@@ -48,7 +48,13 @@ jobs:
         working-directory: ./book
         run: |
           echo "🚧 Iniciando construcción del libro..."
-          ls -R .
+          echo "📂 Carpeta actual (pwd):"
+          pwd
+          echo "📁 Contenido visible:"
+          ls -la
+          echo "🔍 Verificando existencia de _config.yml y _toc.yml..."
+          test -f "_config.yml" && echo "✅ _config.yml encontrado" || echo "❌ _config.yml NO encontrado"
+          test -f "_toc.yml" && echo "✅ _toc.yml encontrado" || echo "❌ _toc.yml NO encontrado"
           echo "🏗 Ejecutando build..."
           jupyter-book build . || (echo "❌ Falló el build del libro" && exit 1)
           echo "✅ Si ves este mensaje, el comando jupyter-book build se ejecutó correctamente"
