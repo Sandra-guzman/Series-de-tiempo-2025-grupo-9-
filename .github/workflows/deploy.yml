@@ -24,6 +24,7 @@ jobs:
 
       - name: Install dependencies
         run: |
+          pip install --upgrade pip
           pip install -U jupyter-book ghp-import
 
       - name: List files before build
@@ -37,7 +38,7 @@ jobs:
           echo "📁 Contenido de la carpeta 'book':"
           ls -R book
           echo "Ejecutando build..."
-          jupyter-book build book/ --path-output book/_build || (echo "❌ Falló el build del libro" && exit 1)
+          jupyter-book build book || (echo "❌ Falló el build del libro" && exit 1)
           echo "Archivos generados:"
           ls -R book/_build || echo "⚠️ No se generó carpeta _build"
 
