@@ -44,15 +44,25 @@ jobs:
           python -c "import jupyter_book; print('✅ jupyter_book importado correctamente')"
 
 
-      - name: Build the Jupyter Book (clean mode)
+      - name: Build the Jupyter Book (Safe Mode)
         run: |
           echo "🚧 Iniciando construcción del libro..."
-          echo "📁 Contenido de ./book:"
-          ls -R ./book
-          echo "🏗 Ejecutando build..."
-          jupyter-book build book --all || (echo "❌ Falló el build del libro" && exit 1)
+          
+          # 1. Navega a la carpeta del libro
+          cd book
+          
+          echo "🧹 Ejecutando clean en el directorio actual (./)..."
+          # Limpiamos el directorio actual (que ahora es 'book')
+          jupyter-book clean .
+          
+          # 2. Construcción: Usa el directorio actual (.) como raíz del proyecto
+          echo "🏗 Ejecutando build desde dentro de la carpeta 'book'..."
+          # Usar . significa: "Construye el libro que se encuentra en este directorio"
+          jupyter-book build . --all || (echo "❌ Falló el build del libro" && exit 1) 
+          
+          # 3. Verificación de salida: Ahora _build está en el directorio actual
           echo "📦 Archivos generados:"
-          ls -R ./book/_build || echo "⚠️ No se generó carpeta _build"
+          ls -R ./_build || echo "⚠️ No se generó carpeta _build"
 
       - name: Inspect build logs
         if: always()
