@@ -35,7 +35,7 @@ jobs:
         working-directory: ./book
         run: |
           echo "🚧 Iniciando construcción del libro..."
-          jupyter-book build . --verbose
+          jupyter-book build . -v
 
       - name: Deploy to GitHub Pages
         env:
