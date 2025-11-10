@@ -50,7 +50,7 @@ jobs:
           echo "📁 Contenido de ./book:"
           ls -R ./book
           echo "🏗 Ejecutando build..."
-          jupyter-book build book/ --all || (echo "❌ Falló el build del libro" && exit 1)
+          jupyter-book build book --all || (echo "❌ Falló el build del libro" && exit 1)
           echo "📦 Archivos generados:"
           ls -R ./book/_build || echo "⚠️ No se generó carpeta _build"
 
