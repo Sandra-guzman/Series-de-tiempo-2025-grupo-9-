@@ -53,6 +53,15 @@ jobs:
           jupyter-book build ./book || (echo "❌ Falló el build del libro" && exit 1)
           echo "📦 Archivos generados:"
           ls -R ./book/_build || echo "⚠️ No se generó carpeta _build"
+          
+      - name: Inspect build logs
+        if: always()
+        run: |
+          echo "🧾 Buscando logs en book/_build/logs..."
+          find ./book/_build -type f -print || echo "⚠️ No se encontraron logs"
+          echo "==================== CONTENIDO DEL LOG ===================="
+          cat ./book/_build/logs/myst.build.json 2>/dev/null || echo "⚠️ No se pudo leer myst.build.json"
+          echo "==========================================================="
 
 
       - name: Deploy to GitHub Pages
