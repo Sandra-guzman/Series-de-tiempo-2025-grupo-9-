@@ -25,7 +25,7 @@ jobs:
       - name: Install dependencies
         run: |
           pip install --upgrade pip
-          pip install -U jupyter-book ghp-import
+          pip install --upgrade jupyter-book myst-parser
 
       - name: List files before build
         run: |
@@ -53,7 +53,7 @@ jobs:
           
           echo "🧹 Ejecutando clean en el directorio actual (./)..."
           # Limpiamos el directorio actual (que ahora es 'book')
-          jupyter-book clean .
+          jupyter-book clean 
           
           # 2. Construcción: Usa el directorio actual (.) como raíz del proyecto
           echo "🏗 Ejecutando build desde dentro de la carpeta 'book'..."
