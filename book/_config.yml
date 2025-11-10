@@ -58,3 +58,9 @@ sphinx:
       code_prompt_show: false     # oculta el botón “Show code”
       code_prompt_hide: false
       execution_mode: "off"       # evita ejecución por seguridad
+    # Ignorar archivos no deseados durante el build
+    exclude_patterns:
+      - Ocultar celdas.py
+      - README.md
+      - "*.log"
+      - "_build"
