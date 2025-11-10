@@ -32,19 +32,19 @@ jobs:
           echo "📁 Estructura del proyecto antes del build:"
           ls -R
 
-      - name: Build the Jupyter Book (debug mode)
+      - name: Build the Jupyter Book
         run: |
           echo "🚧 Iniciando construcción del libro..."
-          echo "📁 Contenido de la carpeta 'book':"
-          ls -R book
+          echo "📁 Contenido de la carpeta 'docs':"
+          ls -R docs
           echo "Ejecutando build..."
-          jupyter-book build book || (echo "❌ Falló el build del libro" && exit 1)
+          jupyter-book build docs || (echo "❌ Falló el build del libro" && exit 1)
           echo "Archivos generados:"
-          ls -R book/_build || echo "⚠️ No se generó carpeta _build"
+          ls -R docs/_build || echo "⚠️ No se generó carpeta _build"
 
       - name: Deploy to GitHub Pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           echo "🚀 Desplegando en GitHub Pages..."
-          ghp-import -n -p -f book/_build/html
+          ghp-import -n -p -f docs/_build/html
