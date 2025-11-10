@@ -32,15 +32,22 @@ jobs:
           echo "📁 Estructura del proyecto antes del build:"
           ls -R
 
+      
+
+      - name: Debug Python environment
+        run: |
+          which python
+          python --version
+          which jupyter-book
+          jupyter-book --version
+          echo "Intentando import jupyter_book en Python:"
+          python -c "import jupyter_book; print('✅ jupyter_book importado correctamente')"
+
+
       - name: Build the Jupyter Book
         run: |
-          echo "🚧 Iniciando construcción del libro..."
-          echo "📁 Contenido de la carpeta 'mybook':"
-          ls -R ./mybook
-          echo "Ejecutando build..."
-          jupyter-book build ./mybook || (echo "❌ Falló el build del libro" && exit 1)
-          echo "Archivos generados:"
-          ls -R ./mybook/_build || echo "⚠️ No se generó carpeta _build"
+          echo "Iniciando construcción del libro con comando directo..."
+          python -m jupyter_book build ./mybook --verbose
 
       - name: Deploy to GitHub Pages
         env:
