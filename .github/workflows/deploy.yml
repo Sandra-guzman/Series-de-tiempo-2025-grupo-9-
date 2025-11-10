@@ -47,7 +47,7 @@ jobs:
       - name: Build the Jupyter Book
         run: |
           echo "Iniciando construcción del libro con comando directo..."
-          python -m jupyter_book build ./mybook --verbose
+          python -m jupyter_book build ./mybook -v
 
       - name: Deploy to GitHub Pages
         env:
