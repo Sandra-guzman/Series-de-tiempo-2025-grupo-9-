@@ -26,28 +26,21 @@ jobs:
         run: |
           pip install -U jupyter-book ghp-import
 
-      - name: Debug structure
+      - name: List files before build
         run: |
-          echo "📁 Estructura completa del proyecto:"
-          find . -maxdepth 3 -type f
+          echo "📁 Estructura del proyecto antes del build:"
+          ls -R
 
-      - name: Build the Jupyter Book
+      - name: Build the Jupyter Book (debug mode)
         working-directory: ./book
         run: |
           echo "🚧 Iniciando construcción del libro..."
-          jupyter-book build . -v || (echo "❌ Falló el build del libro" && exit 1)
-
-      - name: Check build output
-        run: |
-          echo "📁 Comprobando salida del build..."
-          if [ -d "book/_build/html" ]; then
-            echo "✅ Carpeta de salida encontrada: book/_build/html"
-            ls -la book/_build/html
-          else
-            echo "❌ No se encontró la carpeta book/_build/html"
-            echo "⚠️ Revisa los logs del paso anterior (Build the Jupyter Book)"
-            exit 1
-          fi
+          echo "📁 Contenido del directorio actual:"
+          ls -R .
+          echo "Ejecutando build..."
+          jupyter-book build . || (echo "❌ Falló el build del libro" && exit 1)
+          echo "Archivos generados:"
+          ls -R _build || echo "⚠️ No se generó carpeta _build"
 
       - name: Deploy to GitHub Pages
         env:
