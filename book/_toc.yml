@@ -4,13 +4,18 @@ root: intro
 chapters:
   - file: Capitulo0
     title: "Capítulo 0: Propuesta del conjunto de datos"
+
   - file: Capitulo1
     title: "Capítulo 1: Análisis gráfico del conjunto de datos"
-  - file: Capitulo2
+
+  - file: Capiculo2
     title: "Capítulo 2: Modelos y resultados"
+
   - file: Capitulo3
     title: "Capítulo 3: Comparativo de consumo y desempeño de modelos"
+
   - file: Capitulo4
     title: "Capítulo 4: Análisis ARIMA aplicado a la producción de café en Argentina"
-      - file: Capitulo5
-    title: "Capítulo 5:  Modelos híbridos con Facebook Prophet como regresión"
+
+  - file: Capitulo5
+    title: "Capítulo 5: Modelo Prophet y comparación final"
