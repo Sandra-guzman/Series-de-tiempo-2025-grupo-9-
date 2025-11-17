@@ -12,3 +12,5 @@ chapters:
     title: "Capítulo 3: Comparativo de consumo y desempeño de modelos"
   - file: Capitulo4
     title: "Capítulo 4: Análisis ARIMA aplicado a la producción de café en Argentina"
+      - file: Capitulo5
+    title: "Capítulo 5:  Modelos híbridos con Facebook Prophet como regresión"
