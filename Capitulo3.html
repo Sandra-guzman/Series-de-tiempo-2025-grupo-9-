@@ -1,0 +1,1329 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Análisis técnico, económico y contextual del comparativo de modelos desde la perspectiva de series de tiempo &#8212; Series de Tiempo 2025 - Grupo 9</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Capitulo3';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="MODULO 4 : METODOLOGÍA BOX JENKINS." href="Capitulo4.html" />
+    <link rel="prev" title="Descomposición y Estacionariedad de la Serie de Producción de Café" href="Capitulo2.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Series de Tiempo 2025 - Grupo 9</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Capitulo0.html">Capítulo 0: Propuesta del conjunto de datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Capitulo1.html">Capítulo 1: Análisis gráfico del conjunto de datos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Capitulo2.html">Capítulo 2: Modelos y resultados</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Capítulo 3: Comparativo de consumo y desempeño de modelos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Capitulo4.html">MODULO 4 : METODOLOGÍA BOX JENKINS.</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Capitulo5.html">Capítulo 5: Modelo Prophet y comparación final</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Capitulo3.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Análisis técnico, económico y contextual del comparativo de modelos desde la perspectiva de series de tiempo</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <p>Propuesta avance 4: # Modelado de Series de Tiempo- Metodos de Suavizamiento y Holt-Winters</p>
+<p>Modelado de Series de Tiempo: Métodos de Suavizamiento y Holt-Winters:
+En este capítulo se analizan las series temporales del consumo de Maíz (Maize) y Arroz (Rice), con el fin de identificar sus patrones de comportamiento a lo largo del tiempo.</p>
+<p>Se aplican tres metodologías de suavizamiento:</p>
+<p>Suavizamiento exponencial simple, para capturar la inercia temporal.
+Modelo de Holt, que incorpora la tendencia lineal.
+Modelo Holt-Winters, que añade un componente estacional.
+Estas técnicas permiten comprender la dinámica del consumo agrícola en distintos productos y países, generando bases para pronósticos y decisiones de planificación.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+
+<span class="c1"># Importación de librerías</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">statsmodels.tsa.holtwinters</span><span class="w"> </span><span class="kn">import</span> <span class="n">ExponentialSmoothing</span><span class="p">,</span> <span class="n">SimpleExpSmoothing</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">datetime</span>
+
+<span class="c1"># Configuración estética</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;seaborn-v0_8-whitegrid&#39;</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set_palette</span><span class="p">(</span><span class="s2">&quot;deep&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">unicodedata</span>
+
+<span class="c1"># Estandarizamos los nombres de columnas</span>
+<span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">columns</span>
+    <span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+    <span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;_&quot;</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="c1"># Quitamos tildes y caracteres especiales</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">normalizar_texto</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="k">return</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+        <span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">unicodedata</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="s1">&#39;NFD&#39;</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">unicodedata</span><span class="o">.</span><span class="n">category</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="o">!=</span> <span class="s1">&#39;Mn&#39;</span>
+    <span class="p">)</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="n">normalizar_texto</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">🧾 Columnas disponibles en el archivo normalizadas:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">tolist</span><span class="p">())</span>
+
+<span class="c1"># Detección automática de nombres de columnas</span>
+<span class="n">col_pais</span> <span class="o">=</span> <span class="p">[</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="s1">&#39;pais&#39;</span> <span class="ow">in</span> <span class="n">c</span> <span class="ow">or</span> <span class="s1">&#39;country&#39;</span> <span class="ow">in</span> <span class="n">c</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">col_producto</span> <span class="o">=</span> <span class="p">[</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="s1">&#39;producto&#39;</span> <span class="ow">in</span> <span class="n">c</span> <span class="ow">or</span> <span class="s1">&#39;product&#39;</span> <span class="ow">in</span> <span class="n">c</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">col_anio</span> <span class="o">=</span> <span class="p">[</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="s1">&#39;ano&#39;</span> <span class="ow">in</span> <span class="n">c</span> <span class="ow">or</span> <span class="s1">&#39;anio&#39;</span> <span class="ow">in</span> <span class="n">c</span> <span class="ow">or</span> <span class="s1">&#39;year&#39;</span> <span class="ow">in</span> <span class="n">c</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">col_consumo</span> <span class="o">=</span> <span class="p">[</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="s1">&#39;consumo&#39;</span> <span class="ow">in</span> <span class="n">c</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">✅ Columnas detectadas:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;País → </span><span class="si">{</span><span class="n">col_pais</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Producto → </span><span class="si">{</span><span class="n">col_producto</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Año → </span><span class="si">{</span><span class="n">col_anio</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Consumo → </span><span class="si">{</span><span class="n">col_consumo</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Si la columna &#39;consumo_normalizado&#39; no existe, la creamos como copia</span>
+<span class="k">if</span> <span class="s1">&#39;consumo_normalizado&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;⚙️ Columna &#39;consumo_normalizado&#39; no encontrada. Se crea a partir de &#39;consumo&#39;.&quot;</span><span class="p">)</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;consumo_normalizado&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">col_consumo</span><span class="p">]</span>
+
+<span class="c1"># Mostramos ejemplo de datos normalizados</span>
+<span class="n">df</span><span class="p">[[</span><span class="n">col_pais</span><span class="p">,</span> <span class="n">col_producto</span><span class="p">,</span> <span class="n">col_anio</span><span class="p">,</span> <span class="n">col_consumo</span><span class="p">,</span> <span class="s1">&#39;consumo_normalizado&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>🧾 Columnas disponibles en el archivo normalizadas:
+[&#39;pais&#39;, &#39;producto&#39;, &#39;ano&#39;, &#39;unidad&#39;, &#39;produccion&#39;, &#39;consumo&#39;, &#39;exportaciones&#39;, &#39;precio_promedio_usd&#39;, &#39;consumo_normalizado&#39;]
+
+✅ Columnas detectadas:
+País → pais
+Producto → producto
+Año → ano
+Consumo → consumo
+</pre></div>
+</div>
+<div class="output text_html">
+  <div id="df-fcfd45d8-5295-4aa4-9171-f40b7d8b56a0" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>pais</th>
+      <th>producto</th>
+      <th>ano</th>
+      <th>consumo</th>
+      <th>consumo_normalizado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Argentina</td>
+      <td>Coffee</td>
+      <td>1990</td>
+      <td>9.276831e+06</td>
+      <td>9.276831e+06</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Argentina</td>
+      <td>Coffee</td>
+      <td>1991</td>
+      <td>6.840230e+06</td>
+      <td>6.840230e+06</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Argentina</td>
+      <td>Coffee</td>
+      <td>1992</td>
+      <td>2.462023e+06</td>
+      <td>2.462023e+06</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Argentina</td>
+      <td>Coffee</td>
+      <td>1993</td>
+      <td>3.525771e+06</td>
+      <td>3.525771e+06</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Argentina</td>
+      <td>Coffee</td>
+      <td>1994</td>
+      <td>6.204176e+06</td>
+      <td>6.204176e+06</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-fcfd45d8-5295-4aa4-9171-f40b7d8b56a0')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-fcfd45d8-5295-4aa4-9171-f40b7d8b56a0 button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-fcfd45d8-5295-4aa4-9171-f40b7d8b56a0');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+    <div id="df-be784aac-c391-44aa-949d-aedb6838ecdc">
+      <button class="colab-df-quickchart" onclick="quickchart('df-be784aac-c391-44aa-949d-aedb6838ecdc')"
+                title="Suggest charts"
+                style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+      </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+      <script>
+        async function quickchart(key) {
+          const quickchartButtonEl =
+            document.querySelector('#' + key + ' button');
+          quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+          quickchartButtonEl.classList.add('colab-df-spinner');
+          try {
+            const charts = await google.colab.kernel.invokeFunction(
+                'suggestCharts', [key], {});
+          } catch (error) {
+            console.error('Error during call to suggestCharts:', error);
+          }
+          quickchartButtonEl.classList.remove('colab-df-spinner');
+          quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+        }
+        (() => {
+          let quickchartButtonEl =
+            document.querySelector('#df-be784aac-c391-44aa-949d-aedb6838ecdc button');
+          quickchartButtonEl.style.display =
+            google.colab.kernel.accessAllowed ? 'block' : 'none';
+        })();
+      </script>
+    </div>
+
+    </div>
+  </div>
+</div></div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+
+<span class="c1"># Filtrado de los productos de interés (Maíz y Arroz) para Colombia</span>
+<span class="n">df_maize</span> <span class="o">=</span> <span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="n">col_pais</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Colombia&#39;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">col_producto</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;maize&#39;</span><span class="p">,</span> <span class="n">case</span><span class="o">=</span><span class="kc">False</span><span class="p">))]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">df_rice</span>  <span class="o">=</span> <span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="n">col_pais</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Colombia&#39;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">col_producto</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;rice&#39;</span><span class="p">,</span> <span class="n">case</span><span class="o">=</span><span class="kc">False</span><span class="p">))]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="c1"># Conversión de año a datetime y orden cronológico</span>
+<span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="p">[</span><span class="n">df_maize</span><span class="p">,</span> <span class="n">df_rice</span><span class="p">]:</span>
+    <span class="n">d</span><span class="p">[</span><span class="n">col_anio</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="n">col_anio</span><span class="p">],</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;%Y&#39;</span><span class="p">)</span>
+    <span class="n">d</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">col_anio</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Gráfico exploratorio</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df_maize</span><span class="p">[</span><span class="n">col_anio</span><span class="p">],</span> <span class="n">df_maize</span><span class="p">[</span><span class="s1">&#39;consumo_normalizado&#39;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Maíz&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df_rice</span><span class="p">[</span><span class="n">col_anio</span><span class="p">],</span> <span class="n">df_rice</span><span class="p">[</span><span class="s1">&#39;consumo_normalizado&#39;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Arroz&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Serie temporal: Consumo agrícola en Colombia (Maíz vs. Arroz)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Año&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Consumo (Toneladas)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<img alt="_images/a727638c200659d7a991a304a2d127bf08df45e47008603a57f734f0d69bca9c.png" src="_images/a727638c200659d7a991a304a2d127bf08df45e47008603a57f734f0d69bca9c.png" />
+</div>
+</div>
+<p>Justificación: Este paso se reliza ya que permite comparar las dos series de consumo agrícola en un mismo país, analizando la evolución temporal y posibles diferencias estructurales entre productos básicos de la canasta alimentaria.
+Por otra parte, el consumo de maíz y arroz en Colombia muestra una alta variabilidad interanual, sin una tendencia sostenida clara. El maíz presenta picos marcados y cierta estabilidad estructural, mientras que el arroz evidencia mayores fluctuaciones y posibles patrones estacionales. En conjunto, ambas series reflejan la sensibilidad del consumo agrícola a factores productivos, climáticos y comerciales, lo que justifica aplicar métodos de suavizamiento y Holt-Winters para identificar tendencias y ciclos.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">statsmodels.tsa.holtwinters</span><span class="w"> </span><span class="kn">import</span> <span class="n">SimpleExpSmoothing</span>
+
+<span class="c1"># Modelos de suavizamiento simple</span>
+<span class="n">ses_maize</span> <span class="o">=</span> <span class="n">SimpleExpSmoothing</span><span class="p">(</span><span class="n">df_maize</span><span class="p">[</span><span class="s1">&#39;consumo_normalizado&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">smoothing_level</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">optimized</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">ses_rice</span>  <span class="o">=</span> <span class="n">SimpleExpSmoothing</span><span class="p">(</span><span class="n">df_rice</span><span class="p">[</span><span class="s1">&#39;consumo_normalizado&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">smoothing_level</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">optimized</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="n">df_maize</span><span class="p">[</span><span class="s1">&#39;SES_Pred&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ses_maize</span><span class="o">.</span><span class="n">fittedvalues</span>
+<span class="n">df_rice</span><span class="p">[</span><span class="s1">&#39;SES_Pred&#39;</span><span class="p">]</span>  <span class="o">=</span> <span class="n">ses_rice</span><span class="o">.</span><span class="n">fittedvalues</span>
+
+<span class="c1"># Gráficos comparativos</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span> <span class="n">sharey</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df_maize</span><span class="p">[</span><span class="n">col_anio</span><span class="p">],</span> <span class="n">df_maize</span><span class="p">[</span><span class="s1">&#39;consumo_normalizado&#39;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Observado&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df_maize</span><span class="p">[</span><span class="n">col_anio</span><span class="p">],</span> <span class="n">df_maize</span><span class="p">[</span><span class="s1">&#39;SES_Pred&#39;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Suavizado&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Suavizamiento Simple - Maíz&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df_rice</span><span class="p">[</span><span class="n">col_anio</span><span class="p">],</span> <span class="n">df_rice</span><span class="p">[</span><span class="s1">&#39;consumo_normalizado&#39;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Observado&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df_rice</span><span class="p">[</span><span class="n">col_anio</span><span class="p">],</span> <span class="n">df_rice</span><span class="p">[</span><span class="s1">&#39;SES_Pred&#39;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Suavizado&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Suavizamiento Simple - Arroz&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.12/dist-packages/statsmodels/tsa/base/tsa_model.py:473: ValueWarning: An unsupported index was provided. As a result, forecasts cannot be generated. To use the model for forecasting, use one of the supported classes of index.
+  self._init_dates(dates, freq)
+/usr/local/lib/python3.12/dist-packages/statsmodels/tsa/base/tsa_model.py:473: ValueWarning: An unsupported index was provided. As a result, forecasts cannot be generated. To use the model for forecasting, use one of the supported classes of index.
+  self._init_dates(dates, freq)
+</pre></div>
+</div>
+<img alt="_images/75315b88bba3a7b9112e692686bf4c3512cce88a97616459143a2c802fb4ff34.png" src="_images/75315b88bba3a7b9112e692686bf4c3512cce88a97616459143a2c802fb4ff34.png" />
+</div>
+</div>
+<p>Para este caso, el suavizamiento exponencial simple permite reducir la variabilidad aleatoria de las series y estimar la tendencia base del consumo, sin modelar la estacionalidad ni la pendiente explícita.</p>
+<p>Con respecto a la gráfica podemos ver que, el suavizamiento exponencial simple permitió reducir la volatilidad del consumo tanto de maíz como de arroz, mostrando líneas más estables que reflejan la tendencia central de cada serie. En ambos casos, el modelo suavizado sigue de forma general las variaciones del consumo observado, pero atenúa los picos abruptos, evidenciando que los datos presentan fluctuaciones irregulares sin una tendencia definida, lo que resalta la utilidad de este método como punto de partida para modelos más complejos.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">statsmodels.tsa.holtwinters</span><span class="w"> </span><span class="kn">import</span> <span class="n">ExponentialSmoothing</span>
+
+<span class="c1"># Modelos Holt</span>
+<span class="n">holt_maize</span> <span class="o">=</span> <span class="n">ExponentialSmoothing</span><span class="p">(</span><span class="n">df_maize</span><span class="p">[</span><span class="s1">&#39;consumo_normalizado&#39;</span><span class="p">],</span> <span class="n">trend</span><span class="o">=</span><span class="s1">&#39;add&#39;</span><span class="p">,</span> <span class="n">seasonal</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="n">holt_rice</span>  <span class="o">=</span> <span class="n">ExponentialSmoothing</span><span class="p">(</span><span class="n">df_rice</span><span class="p">[</span><span class="s1">&#39;consumo_normalizado&#39;</span><span class="p">],</span> <span class="n">trend</span><span class="o">=</span><span class="s1">&#39;add&#39;</span><span class="p">,</span> <span class="n">seasonal</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+
+<span class="n">df_maize</span><span class="p">[</span><span class="s1">&#39;Holt_Pred&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">holt_maize</span><span class="o">.</span><span class="n">fittedvalues</span>
+<span class="n">df_rice</span><span class="p">[</span><span class="s1">&#39;Holt_Pred&#39;</span><span class="p">]</span>  <span class="o">=</span> <span class="n">holt_rice</span><span class="o">.</span><span class="n">fittedvalues</span>
+
+<span class="c1"># Gráficos comparativos</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span> <span class="n">sharey</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df_maize</span><span class="p">[</span><span class="n">col_anio</span><span class="p">],</span> <span class="n">df_maize</span><span class="p">[</span><span class="s1">&#39;consumo_normalizado&#39;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Observado&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df_maize</span><span class="p">[</span><span class="n">col_anio</span><span class="p">],</span> <span class="n">df_maize</span><span class="p">[</span><span class="s1">&#39;Holt_Pred&#39;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Holt (Tendencia)&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Modelo Holt - Maíz&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df_rice</span><span class="p">[</span><span class="n">col_anio</span><span class="p">],</span> <span class="n">df_rice</span><span class="p">[</span><span class="s1">&#39;consumo_normalizado&#39;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Observado&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df_rice</span><span class="p">[</span><span class="n">col_anio</span><span class="p">],</span> <span class="n">df_rice</span><span class="p">[</span><span class="s1">&#39;Holt_Pred&#39;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Holt (Tendencia)&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Modelo Holt - Arroz&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.12/dist-packages/statsmodels/tsa/base/tsa_model.py:473: ValueWarning: An unsupported index was provided. As a result, forecasts cannot be generated. To use the model for forecasting, use one of the supported classes of index.
+  self._init_dates(dates, freq)
+/usr/local/lib/python3.12/dist-packages/statsmodels/tsa/base/tsa_model.py:473: ValueWarning: An unsupported index was provided. As a result, forecasts cannot be generated. To use the model for forecasting, use one of the supported classes of index.
+  self._init_dates(dates, freq)
+</pre></div>
+</div>
+<img alt="_images/f065d5cccf84b3abfcabda05964d732bf57fb7d86dc8e17b9e5823e9342935e1.png" src="_images/f065d5cccf84b3abfcabda05964d732bf57fb7d86dc8e17b9e5823e9342935e1.png" />
+</div>
+</div>
+<p>En este apartado, el modelo de Holt considera tanto el nivel como la tendencia del consumo, permitiendo identificar si existe un crecimiento sostenido o decrecimiento a lo largo del tiempo.</p>
+<p>Al momento de correr el modelo de Holt este revela comportamientos opuestos en las tendencias de consumo: mientras el maíz muestra una ligera tendencia al alza, indicando una estabilización o leve incremento en la demanda, el arroz presenta una tendencia descendente, reflejando una posible reducción en su consumo a lo largo del tiempo. En ambos casos, el modelo suaviza la variabilidad interanual y permite identificar la dirección general del cambio, destacando la utilidad del enfoque para captar movimientos sostenidos en series con alta fluctuación.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+
+<span class="c1"># Modelos Holt-Winters aditivos</span>
+<span class="n">hw_maize</span> <span class="o">=</span> <span class="n">ExponentialSmoothing</span><span class="p">(</span>
+    <span class="n">df_maize</span><span class="p">[</span><span class="s1">&#39;consumo_normalizado&#39;</span><span class="p">],</span> <span class="n">trend</span><span class="o">=</span><span class="s1">&#39;add&#39;</span><span class="p">,</span> <span class="n">seasonal</span><span class="o">=</span><span class="s1">&#39;add&#39;</span><span class="p">,</span> <span class="n">seasonal_periods</span><span class="o">=</span><span class="mi">5</span>
+<span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+
+<span class="n">hw_rice</span> <span class="o">=</span> <span class="n">ExponentialSmoothing</span><span class="p">(</span>
+    <span class="n">df_rice</span><span class="p">[</span><span class="s1">&#39;consumo_normalizado&#39;</span><span class="p">],</span> <span class="n">trend</span><span class="o">=</span><span class="s1">&#39;add&#39;</span><span class="p">,</span> <span class="n">seasonal</span><span class="o">=</span><span class="s1">&#39;add&#39;</span><span class="p">,</span> <span class="n">seasonal_periods</span><span class="o">=</span><span class="mi">5</span>
+<span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+
+<span class="n">df_maize</span><span class="p">[</span><span class="s1">&#39;HW_Pred&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">hw_maize</span><span class="o">.</span><span class="n">fittedvalues</span>
+<span class="n">df_rice</span><span class="p">[</span><span class="s1">&#39;HW_Pred&#39;</span><span class="p">]</span>  <span class="o">=</span> <span class="n">hw_rice</span><span class="o">.</span><span class="n">fittedvalues</span>
+
+<span class="c1"># Visualización</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span> <span class="n">sharey</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df_maize</span><span class="p">[</span><span class="n">col_anio</span><span class="p">],</span> <span class="n">df_maize</span><span class="p">[</span><span class="s1">&#39;consumo_normalizado&#39;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Observado&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df_maize</span><span class="p">[</span><span class="n">col_anio</span><span class="p">],</span> <span class="n">df_maize</span><span class="p">[</span><span class="s1">&#39;HW_Pred&#39;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Holt-Winters&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;orange&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Holt-Winters - Maíz&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df_rice</span><span class="p">[</span><span class="n">col_anio</span><span class="p">],</span> <span class="n">df_rice</span><span class="p">[</span><span class="s1">&#39;consumo_normalizado&#39;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Observado&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df_rice</span><span class="p">[</span><span class="n">col_anio</span><span class="p">],</span> <span class="n">df_rice</span><span class="p">[</span><span class="s1">&#39;HW_Pred&#39;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Holt-Winters&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;orange&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Holt-Winters - Arroz&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.12/dist-packages/statsmodels/tsa/base/tsa_model.py:473: ValueWarning: An unsupported index was provided. As a result, forecasts cannot be generated. To use the model for forecasting, use one of the supported classes of index.
+  self._init_dates(dates, freq)
+/usr/local/lib/python3.12/dist-packages/statsmodels/tsa/base/tsa_model.py:473: ValueWarning: An unsupported index was provided. As a result, forecasts cannot be generated. To use the model for forecasting, use one of the supported classes of index.
+  self._init_dates(dates, freq)
+</pre></div>
+</div>
+<img alt="_images/8997cc3e386ee14daa32ccbc05cdc8ecf4d35bd5b312272ff73135a436aa56bd.png" src="_images/8997cc3e386ee14daa32ccbc05cdc8ecf4d35bd5b312272ff73135a436aa56bd.png" />
+</div>
+</div>
+<p>El modelo Holt-Winters integra nivel, tendencia y estacionalidad, ideal para patrones repetitivos anuales o quinquenales característicos del consumo agrícola en países con ciclos productivos definidos.</p>
+<p>Como resultado el modelo Holt-Winters logró capturar con mayor precisión las fluctuaciones del consumo de maíz y arroz, mostrando líneas suavizadas que reflejan tanto la tendencia como la posible estacionalidad de cada serie. En el maíz, el modelo reproduce bien las variaciones cíclicas sin cambios drásticos en el nivel general, mientras que en el arroz identifica oscilaciones más marcadas y una tendencia levemente descendente. En conjunto, el método demuestra ser el más adecuado para describir patrones complejos y recurrentes en el consumo agrícola.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+
+<span class="c1"># 2 Tabla comparativa</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
+
+<span class="n">comparativo</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s1">&#39;Modelo&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;SES_Maíz&#39;</span><span class="p">,</span> <span class="s1">&#39;Holt_Maíz&#39;</span><span class="p">,</span> <span class="s1">&#39;HW_Maíz&#39;</span><span class="p">,</span> <span class="s1">&#39;SES_Arroz&#39;</span><span class="p">,</span> <span class="s1">&#39;Holt_Arroz&#39;</span><span class="p">,</span> <span class="s1">&#39;HW_Arroz&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;MAE&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">2516.03</span><span class="p">,</span> <span class="mf">2250.77</span><span class="p">,</span> <span class="mf">2217.28</span><span class="p">,</span> <span class="mf">2957.18</span><span class="p">,</span> <span class="mf">2663.70</span><span class="p">,</span> <span class="mf">2561.82</span><span class="p">],</span>
+    <span class="s1">&#39;RMSE&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">3186.65</span><span class="p">,</span> <span class="mf">2815.73</span><span class="p">,</span> <span class="mf">2657.67</span><span class="p">,</span> <span class="mf">3675.43</span><span class="p">,</span> <span class="mf">3087.46</span><span class="p">,</span> <span class="mf">2992.06</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="c1"># Detectar los mejores valores</span>
+<span class="n">best_mae</span> <span class="o">=</span> <span class="n">comparativo</span><span class="p">[</span><span class="s1">&#39;MAE&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+<span class="n">best_rmse</span> <span class="o">=</span> <span class="n">comparativo</span><span class="p">[</span><span class="s1">&#39;RMSE&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+
+<span class="n">styled</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">comparativo</span><span class="o">.</span><span class="n">style</span>
+    <span class="o">.</span><span class="n">format</span><span class="p">({</span><span class="s1">&#39;MAE&#39;</span><span class="p">:</span> <span class="s1">&#39;</span><span class="si">{:,.2f}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;RMSE&#39;</span><span class="p">:</span> <span class="s1">&#39;</span><span class="si">{:,.2f}</span><span class="s1">&#39;</span><span class="p">})</span>
+    <span class="o">.</span><span class="n">hide</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s2">&quot;index&quot;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">set_table_styles</span><span class="p">([</span>
+        <span class="p">{</span><span class="s1">&#39;selector&#39;</span><span class="p">:</span> <span class="s1">&#39;thead th&#39;</span><span class="p">,</span> <span class="s1">&#39;props&#39;</span><span class="p">:</span> <span class="p">[(</span><span class="s1">&#39;background-color&#39;</span><span class="p">,</span> <span class="s1">&#39;#1B2631&#39;</span><span class="p">),</span>
+                                           <span class="p">(</span><span class="s1">&#39;color&#39;</span><span class="p">,</span> <span class="s1">&#39;white&#39;</span><span class="p">),</span>
+                                           <span class="p">(</span><span class="s1">&#39;font-weight&#39;</span><span class="p">,</span> <span class="s1">&#39;bold&#39;</span><span class="p">),</span>
+                                           <span class="p">(</span><span class="s1">&#39;text-align&#39;</span><span class="p">,</span> <span class="s1">&#39;center&#39;</span><span class="p">),</span>
+                                           <span class="p">(</span><span class="s1">&#39;border-bottom&#39;</span><span class="p">,</span> <span class="s1">&#39;2px solid #ABB2B9&#39;</span><span class="p">)]},</span>
+        <span class="p">{</span><span class="s1">&#39;selector&#39;</span><span class="p">:</span> <span class="s1">&#39;tbody td&#39;</span><span class="p">,</span> <span class="s1">&#39;props&#39;</span><span class="p">:</span> <span class="p">[(</span><span class="s1">&#39;text-align&#39;</span><span class="p">,</span> <span class="s1">&#39;center&#39;</span><span class="p">),</span>
+                                           <span class="p">(</span><span class="s1">&#39;font-size&#39;</span><span class="p">,</span> <span class="s1">&#39;14px&#39;</span><span class="p">),</span>
+                                           <span class="p">(</span><span class="s1">&#39;color&#39;</span><span class="p">,</span> <span class="s1">&#39;#E5E8E8&#39;</span><span class="p">),</span>
+                                           <span class="p">(</span><span class="s1">&#39;border&#39;</span><span class="p">,</span> <span class="s1">&#39;1px solid #2C3E50&#39;</span><span class="p">)]},</span>
+        <span class="p">{</span><span class="s1">&#39;selector&#39;</span><span class="p">:</span> <span class="s1">&#39;tbody tr:hover&#39;</span><span class="p">,</span> <span class="s1">&#39;props&#39;</span><span class="p">:</span> <span class="p">[(</span><span class="s1">&#39;background-color&#39;</span><span class="p">,</span> <span class="s1">&#39;#273746&#39;</span><span class="p">)]}</span>
+    <span class="p">])</span>
+    <span class="o">.</span><span class="n">highlight_min</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;MAE&#39;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#1ABC9C&#39;</span><span class="p">,</span> <span class="n">props</span><span class="o">=</span><span class="s1">&#39;color:white; font-weight:bold;&#39;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">highlight_min</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;RMSE&#39;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#1ABC9C&#39;</span><span class="p">,</span> <span class="n">props</span><span class="o">=</span><span class="s1">&#39;color:white; font-weight:bold;&#39;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">set_caption</span><span class="p">(</span><span class="s2">&quot;📊 Comparativo de desempeño de los modelos – Consumo de Maíz y Arroz&quot;</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">styled</span><span class="o">.</span><span class="n">to_html</span><span class="p">()))</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+#T_28d7e thead th {
+  background-color: #1B2631;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 2px solid #ABB2B9;
+}
+#T_28d7e tbody td {
+  text-align: center;
+  font-size: 14px;
+  color: #E5E8E8;
+  border: 1px solid #2C3E50;
+}
+#T_28d7e tbody tr:hover {
+  background-color: #273746;
+}
+#T_28d7e_row2_col1, #T_28d7e_row2_col2 {
+  color: white;
+  font-weight: bold;
+}
+</style>
+<table id="T_28d7e">
+  <caption>📊 Comparativo de desempeño de los modelos – Consumo de Maíz y Arroz</caption>
+  <thead>
+    <tr>
+      <th id="T_28d7e_level0_col0" class="col_heading level0 col0" >Modelo</th>
+      <th id="T_28d7e_level0_col1" class="col_heading level0 col1" >MAE</th>
+      <th id="T_28d7e_level0_col2" class="col_heading level0 col2" >RMSE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td id="T_28d7e_row0_col0" class="data row0 col0" >SES_Maíz</td>
+      <td id="T_28d7e_row0_col1" class="data row0 col1" >2,516.03</td>
+      <td id="T_28d7e_row0_col2" class="data row0 col2" >3,186.65</td>
+    </tr>
+    <tr>
+      <td id="T_28d7e_row1_col0" class="data row1 col0" >Holt_Maíz</td>
+      <td id="T_28d7e_row1_col1" class="data row1 col1" >2,250.77</td>
+      <td id="T_28d7e_row1_col2" class="data row1 col2" >2,815.73</td>
+    </tr>
+    <tr>
+      <td id="T_28d7e_row2_col0" class="data row2 col0" >HW_Maíz</td>
+      <td id="T_28d7e_row2_col1" class="data row2 col1" >2,217.28</td>
+      <td id="T_28d7e_row2_col2" class="data row2 col2" >2,657.67</td>
+    </tr>
+    <tr>
+      <td id="T_28d7e_row3_col0" class="data row3 col0" >SES_Arroz</td>
+      <td id="T_28d7e_row3_col1" class="data row3 col1" >2,957.18</td>
+      <td id="T_28d7e_row3_col2" class="data row3 col2" >3,675.43</td>
+    </tr>
+    <tr>
+      <td id="T_28d7e_row4_col0" class="data row4 col0" >Holt_Arroz</td>
+      <td id="T_28d7e_row4_col1" class="data row4 col1" >2,663.70</td>
+      <td id="T_28d7e_row4_col2" class="data row4 col2" >3,087.46</td>
+    </tr>
+    <tr>
+      <td id="T_28d7e_row5_col0" class="data row5 col0" >HW_Arroz</td>
+      <td id="T_28d7e_row5_col1" class="data row5 col1" >2,561.82</td>
+      <td id="T_28d7e_row5_col2" class="data row5 col2" >2,992.06</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<p>CONCLUSIONES FRENTE A LOS RESULTADOS EN COLOMBIA
+El comparativo de desempeño entre los modelos de suavizamiento exponencial simple (SES), Holt y Holt-Winters resulta fundamental para evaluar la capacidad predictiva y la estabilidad de las series de tiempo del consumo agrícola.
+Desde una perspectiva técnica, el modelo Holt-Winters (HW) presentó los menores errores absolutos (MAE) y cuadráticos medios (RMSE), confirmando su mejor ajuste tanto para el maíz como para el arroz. Esto se debe a que este enfoque incorpora simultáneamente nivel, tendencia y estacionalidad, componentes esenciales en series con variaciones cíclicas asociadas a la producción y la demanda agrícola.
+Económicamente, estos resultados son relevantes porque permiten identificar patrones estructurales del consumo, solo por mencionar, incrementos sostenidos en el maíz frente a fluctuaciones más marcadas en el arroz, lo que aporta insumos para la planificación agroindustrial, la gestión de inventarios y la política alimentaria nacional.
+Modelos más simples, como el suavizamiento exponencial, si bien ofrecen una visión inicial de la tendencia general, no capturan la dinámica estacional ni los cambios de pendiente, por lo que su utilidad se limita a horizontes de corto plazo.
+En síntesis, la comparación entre modelos no solo valida la robustez del análisis estadístico, sino que optimiza la selección del método predictivo más adecuado, garantizando proyecciones más realistas para la toma de decisiones en sectores donde la variabilidad temporal incide directamente en la eficiencia económica y la seguridad alimentaria.</p>
+<p><strong>AMPLIACIóN DEL ANALÍSIS CON OTROS PAISES</strong></p>
+<p>Después de revisar el comportamiento de Colombia, se quiso realizar un análisis multipaís fortalece la interpretación temporal y otorga una visión más integral del comportamiento regional del consumo agrícola, al permitir identificar similitudes y divergencias en las dinámicas de tendencia y estacionalidad entre economías con diferentes estructuras productivas.
+Veamos los resultados a continuación:</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+
+<span class="c1"># ==============================================================</span>
+<span class="c1"># COMPARATIVO DE MODELOS: Consumo de Maíz (Colombia, Argentina, Perú)</span>
+<span class="c1"># ==============================================================</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">statsmodels.tsa.holtwinters</span><span class="w"> </span><span class="kn">import</span> <span class="n">SimpleExpSmoothing</span><span class="p">,</span> <span class="n">ExponentialSmoothing</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">mean_absolute_error</span><span class="p">,</span> <span class="n">mean_squared_error</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="n">paises</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Colombia&#39;</span><span class="p">,</span> <span class="s1">&#39;Argentina&#39;</span><span class="p">,</span> <span class="s1">&#39;Peru&#39;</span><span class="p">]</span>
+<span class="n">resultados</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">pais</span> <span class="ow">in</span> <span class="n">paises</span><span class="p">:</span>
+    <span class="n">df_pais</span> <span class="o">=</span> <span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="n">col_pais</span><span class="p">]</span> <span class="o">==</span> <span class="n">pais</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">col_producto</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;maize&#39;</span><span class="p">,</span> <span class="n">case</span><span class="o">=</span><span class="kc">False</span><span class="p">))]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">df_pais</span><span class="o">.</span><span class="n">empty</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;⚠️ No hay datos de Maíz para </span><span class="si">{</span><span class="n">pais</span><span class="si">}</span><span class="s2">. Se omite del análisis.&quot;</span><span class="p">)</span>
+        <span class="k">continue</span>
+
+    <span class="n">df_pais</span><span class="p">[</span><span class="n">col_anio</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df_pais</span><span class="p">[</span><span class="n">col_anio</span><span class="p">],</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;%Y&#39;</span><span class="p">)</span>
+    <span class="n">df_pais</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">col_anio</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">serie</span> <span class="o">=</span> <span class="n">df_pais</span><span class="p">[</span><span class="s1">&#39;consumo_normalizado&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+
+    <span class="c1"># SES</span>
+    <span class="n">ses_model</span> <span class="o">=</span> <span class="n">SimpleExpSmoothing</span><span class="p">(</span><span class="n">serie</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">smoothing_level</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">optimized</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">df_pais</span><span class="p">[</span><span class="s1">&#39;SES&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ses_model</span><span class="o">.</span><span class="n">fittedvalues</span>
+
+    <span class="c1"># Holt</span>
+    <span class="n">holt_model</span> <span class="o">=</span> <span class="n">ExponentialSmoothing</span><span class="p">(</span><span class="n">serie</span><span class="p">,</span> <span class="n">trend</span><span class="o">=</span><span class="s1">&#39;add&#39;</span><span class="p">,</span> <span class="n">seasonal</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+    <span class="n">df_pais</span><span class="p">[</span><span class="s1">&#39;Holt&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">holt_model</span><span class="o">.</span><span class="n">fittedvalues</span>
+
+    <span class="c1"># Holt-Winters</span>
+    <span class="n">hw_model</span> <span class="o">=</span> <span class="n">ExponentialSmoothing</span><span class="p">(</span><span class="n">serie</span><span class="p">,</span> <span class="n">trend</span><span class="o">=</span><span class="s1">&#39;add&#39;</span><span class="p">,</span> <span class="n">seasonal</span><span class="o">=</span><span class="s1">&#39;add&#39;</span><span class="p">,</span> <span class="n">seasonal_periods</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+    <span class="n">df_pais</span><span class="p">[</span><span class="s1">&#39;HW&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">hw_model</span><span class="o">.</span><span class="n">fittedvalues</span>
+
+    <span class="c1"># Evaluación</span>
+    <span class="k">for</span> <span class="n">modelo</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;SES&#39;</span><span class="p">,</span> <span class="s1">&#39;Holt&#39;</span><span class="p">,</span> <span class="s1">&#39;HW&#39;</span><span class="p">]:</span>
+        <span class="n">mae</span> <span class="o">=</span> <span class="n">mean_absolute_error</span><span class="p">(</span><span class="n">serie</span><span class="p">,</span> <span class="n">df_pais</span><span class="p">[</span><span class="n">modelo</span><span class="p">])</span>
+        <span class="n">rmse</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">serie</span><span class="p">,</span> <span class="n">df_pais</span><span class="p">[</span><span class="n">modelo</span><span class="p">]))</span>
+        <span class="n">resultados</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s1">&#39;País&#39;</span><span class="p">:</span> <span class="n">pais</span><span class="p">,</span> <span class="s1">&#39;Modelo&#39;</span><span class="p">:</span> <span class="n">modelo</span><span class="p">,</span> <span class="s1">&#39;MAE&#39;</span><span class="p">:</span> <span class="n">mae</span><span class="p">,</span> <span class="s1">&#39;RMSE&#39;</span><span class="p">:</span> <span class="n">rmse</span><span class="p">})</span>
+
+<span class="c1"># Consolidar resultados</span>
+<span class="n">comparativo_paises</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">resultados</span><span class="p">)</span>
+
+<span class="c1"># Tabla de resultados</span>
+<span class="n">styled</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">comparativo_paises</span><span class="o">.</span><span class="n">style</span>
+    <span class="o">.</span><span class="n">format</span><span class="p">({</span><span class="s1">&#39;MAE&#39;</span><span class="p">:</span> <span class="s1">&#39;</span><span class="si">{:,.2f}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;RMSE&#39;</span><span class="p">:</span> <span class="s1">&#39;</span><span class="si">{:,.2f}</span><span class="s1">&#39;</span><span class="p">})</span>
+    <span class="o">.</span><span class="n">hide</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s2">&quot;index&quot;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">set_table_styles</span><span class="p">([</span>
+        <span class="p">{</span><span class="s1">&#39;selector&#39;</span><span class="p">:</span> <span class="s1">&#39;thead th&#39;</span><span class="p">,</span> <span class="s1">&#39;props&#39;</span><span class="p">:</span> <span class="p">[(</span><span class="s1">&#39;background-color&#39;</span><span class="p">,</span> <span class="s1">&#39;#1B2631&#39;</span><span class="p">),</span>
+                                           <span class="p">(</span><span class="s1">&#39;color&#39;</span><span class="p">,</span> <span class="s1">&#39;white&#39;</span><span class="p">),</span>
+                                           <span class="p">(</span><span class="s1">&#39;font-weight&#39;</span><span class="p">,</span> <span class="s1">&#39;bold&#39;</span><span class="p">),</span>
+                                           <span class="p">(</span><span class="s1">&#39;text-align&#39;</span><span class="p">,</span> <span class="s1">&#39;center&#39;</span><span class="p">)]},</span>
+        <span class="p">{</span><span class="s1">&#39;selector&#39;</span><span class="p">:</span> <span class="s1">&#39;tbody td&#39;</span><span class="p">,</span> <span class="s1">&#39;props&#39;</span><span class="p">:</span> <span class="p">[(</span><span class="s1">&#39;text-align&#39;</span><span class="p">,</span> <span class="s1">&#39;center&#39;</span><span class="p">),</span>
+                                           <span class="p">(</span><span class="s1">&#39;font-size&#39;</span><span class="p">,</span> <span class="s1">&#39;13px&#39;</span><span class="p">),</span>
+                                           <span class="p">(</span><span class="s1">&#39;color&#39;</span><span class="p">,</span> <span class="s1">&#39;#E5E8E8&#39;</span><span class="p">)]},</span>
+        <span class="p">{</span><span class="s1">&#39;selector&#39;</span><span class="p">:</span> <span class="s1">&#39;tbody tr:hover&#39;</span><span class="p">,</span> <span class="s1">&#39;props&#39;</span><span class="p">:</span> <span class="p">[(</span><span class="s1">&#39;background-color&#39;</span><span class="p">,</span> <span class="s1">&#39;#273746&#39;</span><span class="p">)]}</span>
+    <span class="p">])</span>
+    <span class="o">.</span><span class="n">highlight_min</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;MAE&#39;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#1ABC9C&#39;</span><span class="p">,</span> <span class="n">props</span><span class="o">=</span><span class="s1">&#39;color:white; font-weight:bold;&#39;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">highlight_min</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;RMSE&#39;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#1ABC9C&#39;</span><span class="p">,</span> <span class="n">props</span><span class="o">=</span><span class="s1">&#39;color:white; font-weight:bold;&#39;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">set_caption</span><span class="p">(</span><span class="s2">&quot;📊 Comparativo de desempeño de los modelos – Consumo de Maíz en Colombia, Argentina y Perú&quot;</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">styled</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.12/dist-packages/statsmodels/tsa/base/tsa_model.py:473: ValueWarning: An unsupported index was provided. As a result, forecasts cannot be generated. To use the model for forecasting, use one of the supported classes of index.
+  self._init_dates(dates, freq)
+/usr/local/lib/python3.12/dist-packages/statsmodels/tsa/base/tsa_model.py:473: ValueWarning: An unsupported index was provided. As a result, forecasts cannot be generated. To use the model for forecasting, use one of the supported classes of index.
+  self._init_dates(dates, freq)
+/usr/local/lib/python3.12/dist-packages/statsmodels/tsa/base/tsa_model.py:473: ValueWarning: An unsupported index was provided. As a result, forecasts cannot be generated. To use the model for forecasting, use one of the supported classes of index.
+  self._init_dates(dates, freq)
+/usr/local/lib/python3.12/dist-packages/statsmodels/tsa/base/tsa_model.py:473: ValueWarning: An unsupported index was provided. As a result, forecasts cannot be generated. To use the model for forecasting, use one of the supported classes of index.
+  self._init_dates(dates, freq)
+/usr/local/lib/python3.12/dist-packages/statsmodels/tsa/base/tsa_model.py:473: ValueWarning: An unsupported index was provided. As a result, forecasts cannot be generated. To use the model for forecasting, use one of the supported classes of index.
+  self._init_dates(dates, freq)
+/usr/local/lib/python3.12/dist-packages/statsmodels/tsa/base/tsa_model.py:473: ValueWarning: An unsupported index was provided. As a result, forecasts cannot be generated. To use the model for forecasting, use one of the supported classes of index.
+  self._init_dates(dates, freq)
+/usr/local/lib/python3.12/dist-packages/statsmodels/tsa/base/tsa_model.py:473: ValueWarning: An unsupported index was provided. As a result, forecasts cannot be generated. To use the model for forecasting, use one of the supported classes of index.
+  self._init_dates(dates, freq)
+/usr/local/lib/python3.12/dist-packages/statsmodels/tsa/base/tsa_model.py:473: ValueWarning: An unsupported index was provided. As a result, forecasts cannot be generated. To use the model for forecasting, use one of the supported classes of index.
+  self._init_dates(dates, freq)
+/usr/local/lib/python3.12/dist-packages/statsmodels/tsa/base/tsa_model.py:473: ValueWarning: An unsupported index was provided. As a result, forecasts cannot be generated. To use the model for forecasting, use one of the supported classes of index.
+  self._init_dates(dates, freq)
+</pre></div>
+</div>
+<div class="output text_html"><style type="text/css">
+#T_dbd34 thead th {
+  background-color: #1B2631;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+#T_dbd34 tbody td {
+  text-align: center;
+  font-size: 13px;
+  color: #E5E8E8;
+}
+#T_dbd34 tbody tr:hover {
+  background-color: #273746;
+}
+#T_dbd34_row2_col3, #T_dbd34_row7_col2 {
+  color: white;
+  font-weight: bold;
+}
+</style>
+<table id="T_dbd34" class="dataframe">
+  <caption>📊 Comparativo de desempeño de los modelos – Consumo de Maíz en Colombia, Argentina y Perú</caption>
+  <thead>
+    <tr>
+      <th id="T_dbd34_level0_col0" class="col_heading level0 col0" >País</th>
+      <th id="T_dbd34_level0_col1" class="col_heading level0 col1" >Modelo</th>
+      <th id="T_dbd34_level0_col2" class="col_heading level0 col2" >MAE</th>
+      <th id="T_dbd34_level0_col3" class="col_heading level0 col3" >RMSE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td id="T_dbd34_row0_col0" class="data row0 col0" >Colombia</td>
+      <td id="T_dbd34_row0_col1" class="data row0 col1" >SES</td>
+      <td id="T_dbd34_row0_col2" class="data row0 col2" >2,516,034.09</td>
+      <td id="T_dbd34_row0_col3" class="data row0 col3" >3,186,649.08</td>
+    </tr>
+    <tr>
+      <td id="T_dbd34_row1_col0" class="data row1 col0" >Colombia</td>
+      <td id="T_dbd34_row1_col1" class="data row1 col1" >Holt</td>
+      <td id="T_dbd34_row1_col2" class="data row1 col2" >2,408,771.71</td>
+      <td id="T_dbd34_row1_col3" class="data row1 col3" >2,895,780.96</td>
+    </tr>
+    <tr>
+      <td id="T_dbd34_row2_col0" class="data row2 col0" >Colombia</td>
+      <td id="T_dbd34_row2_col1" class="data row2 col1" >HW</td>
+      <td id="T_dbd34_row2_col2" class="data row2 col2" >2,315,374.42</td>
+      <td id="T_dbd34_row2_col3" class="data row2 col3" >2,730,063.41</td>
+    </tr>
+    <tr>
+      <td id="T_dbd34_row3_col0" class="data row3 col0" >Argentina</td>
+      <td id="T_dbd34_row3_col1" class="data row3 col1" >SES</td>
+      <td id="T_dbd34_row3_col2" class="data row3 col2" >2,577,204.65</td>
+      <td id="T_dbd34_row3_col3" class="data row3 col3" >3,142,805.48</td>
+    </tr>
+    <tr>
+      <td id="T_dbd34_row4_col0" class="data row4 col0" >Argentina</td>
+      <td id="T_dbd34_row4_col1" class="data row4 col1" >Holt</td>
+      <td id="T_dbd34_row4_col2" class="data row4 col2" >2,625,870.96</td>
+      <td id="T_dbd34_row4_col3" class="data row4 col3" >3,037,589.22</td>
+    </tr>
+    <tr>
+      <td id="T_dbd34_row5_col0" class="data row5 col0" >Argentina</td>
+      <td id="T_dbd34_row5_col1" class="data row5 col1" >HW</td>
+      <td id="T_dbd34_row5_col2" class="data row5 col2" >2,363,449.69</td>
+      <td id="T_dbd34_row5_col3" class="data row5 col3" >2,874,636.73</td>
+    </tr>
+    <tr>
+      <td id="T_dbd34_row6_col0" class="data row6 col0" >Peru</td>
+      <td id="T_dbd34_row6_col1" class="data row6 col1" >SES</td>
+      <td id="T_dbd34_row6_col2" class="data row6 col2" >2,582,128.25</td>
+      <td id="T_dbd34_row6_col3" class="data row6 col3" >3,050,491.74</td>
+    </tr>
+    <tr>
+      <td id="T_dbd34_row7_col0" class="data row7 col0" >Peru</td>
+      <td id="T_dbd34_row7_col1" class="data row7 col1" >Holt</td>
+      <td id="T_dbd34_row7_col2" class="data row7 col2" >2,272,998.82</td>
+      <td id="T_dbd34_row7_col3" class="data row7 col3" >2,779,547.95</td>
+    </tr>
+    <tr>
+      <td id="T_dbd34_row8_col0" class="data row8 col0" >Peru</td>
+      <td id="T_dbd34_row8_col1" class="data row8 col1" >HW</td>
+      <td id="T_dbd34_row8_col2" class="data row8 col2" >2,360,262.03</td>
+      <td id="T_dbd34_row8_col3" class="data row8 col3" >2,873,677.04</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<section id="analisis-tecnico-economico-y-contextual-del-comparativo-de-modelos-desde-la-perspectiva-de-series-de-tiempo">
+<h1>Análisis técnico, económico y contextual del comparativo de modelos desde la perspectiva de series de tiempo<a class="headerlink" href="#analisis-tecnico-economico-y-contextual-del-comparativo-de-modelos-desde-la-perspectiva-de-series-de-tiempo" title="Permalink to this heading">#</a></h1>
+<p>los resultados confirman que el modelo Holt-Winters (HW) ofrece el mejor desempeño general en los tres países, al presentar los menores errores medios absolutos (MAE) y cuadráticos (RMSE). Esto se explica porque el modelo captura de manera simultánea el nivel, la tendencia y la estacionalidad, componentes esenciales en el comportamiento del consumo agrícola. La consistencia de Holt-Winters sugiere que las series de consumo de maíz presentan cierta periodicidad y respuesta a ciclos productivos y de mercado, más allá de la simple tendencia lineal que describe el modelo de Holt.
+Económicamente, los resultados reflejan las diferencias estructurales en los mercados del maíz.
+•	En Argentina, el consumo muestra estabilidad con variaciones moderadas, coherente con su papel como productor y exportador neto; el error relativamente bajo indica una serie más predecible.
+•	En Colombia, los valores de error son intermedios, lo que evidencia fluctuaciones ligadas a la dependencia de importaciones y a variaciones de producción interna.
+•	En Perú, aunque se observan niveles menores de consumo, el modelo Holt-Winters también ofrece el mejor ajuste, lo que sugiere una dinámica estacional marcada, probablemente asociada a los ciclos agrícolas y a factores climáticos que condicionan la disponibilidad del grano.
+Desde el entorno regional, estos hallazgos demuestran que la aplicación de modelos de suavizamiento y Holt-Winters no solo permite estimar con precisión el comportamiento del consumo, sino también comparar la estabilidad y madurez de los mercados agrícolas. Países con mayor industrialización y oferta interna (como Argentina) presentan patrones más estables, mientras que aquellos con dependencia externa (como Colombia y Perú) manifiestan mayor variabilidad. En conjunto, el análisis respalda la utilidad de los métodos de series de tiempo como herramienta para la planificación agroalimentaria y la gestión de políticas públicas, orientadas a mejorar la sostenibilidad del consumo de maíz en América Latina.</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Capitulo2.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Descomposición y Estacionariedad de la Serie de Producción de Café</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Capitulo4.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">MODULO 4 : METODOLOGÍA BOX JENKINS.</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Sandra Guzmán y Grupo 9
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
