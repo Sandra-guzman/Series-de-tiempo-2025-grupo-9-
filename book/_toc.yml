@@ -8,7 +8,7 @@ chapters:
   - file: Capitulo1
     title: "Capítulo 1: Análisis gráfico del conjunto de datos"
 
-  - file: Capiculo2
+  - file: Capitulo2
     title: "Capítulo 2: Modelos y resultados"
 
   - file: Capitulo3
@@ -21,4 +21,4 @@ chapters:
     title: "Capítulo 5: Modelo Prophet y comparación final"
 
   - file: Capitulo6
-    title: "Capítulo 5: Capítulo 6 — Redes Neuronales Elman y Jordan"
+    title: "Capítulo 6: Redes Neuronales Elman y Jordan"
