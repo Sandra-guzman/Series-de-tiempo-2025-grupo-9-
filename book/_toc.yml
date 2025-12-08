@@ -20,5 +20,5 @@ chapters:
   - file: Capitulo5
     title: "Capítulo 5: Modelo Prophet y comparación final"
 
-      - file: Capitulo6
+  - file: Capitulo6
     title: "Capítulo 5: Capítulo 6 — Redes Neuronales Elman y Jordan"
